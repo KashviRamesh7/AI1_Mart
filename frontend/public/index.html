@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+  <meta name="theme-color" content="#0EA5E9"/>
+  <meta name="description" content="AI1 Mart - All In One Mart. Shop electronics, fashion, books and more."/>
+  <meta name="mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+  <meta name="apple-mobile-web-app-title" content="AI1 Mart"/>
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <title>AI1 Mart – All In One Mart</title>
+  <style>
+    #splash{position:fixed;inset:0;background:linear-gradient(135deg,#0C1A2E,#0EA5E9);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:9999;font-family:'Poppins',sans-serif;transition:opacity .4s}
+    #splash .logo{font-size:48px;font-weight:900;color:#fff;letter-spacing:-2px;margin-bottom:6px}
+    #splash .logo .y{color:#F59E0B}
+    #splash .logo .b{color:#BAE6FD}
+    #splash p{color:rgba(255,255,255,.55);font-size:14px;margin-bottom:28px}
+    #splash .ring{width:38px;height:38px;border:3px solid rgba(255,255,255,.2);border-top-color:#fff;border-radius:50%;animation:sp .8s linear infinite}
+    @keyframes sp{to{transform:rotate(360deg)}}
+  </style>
+</head>
+<body style="margin:0">
+  <div id="splash">
+    <div class="logo">AI<span class="y">1</span><span class="b"> Mart</span></div>
+    <p>All In One Mart</p>
+    <div class="ring"></div>
+  </div>
+  <div id="root"></div>
+  <script>
+    window.addEventListener('load',function(){
+      setTimeout(function(){
+        var s=document.getElementById('splash');
+        if(s){s.style.opacity='0';setTimeout(function(){s.style.display='none'},400);}
+      },900);
+    });
+  </script>
+</body>
+</html>
